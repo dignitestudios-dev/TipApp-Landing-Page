@@ -12,16 +12,16 @@ export default function Hero() {
             : "bg-gradient-to-br from-[#002225] via-[#0D3A3F] to-[#0D3A3F]"
         }`}
       >
-        <img src="/sphere1.png" className="absolute -right-5 -top-10 w-30" alt="" />
+        <img src="/sphere1.png" className="absolute -right-5 z-4 -top-10 w-30" alt="" />
         <div>
           <img
             src="/about/shade1.png"
-            className="absolute top-0 w-[240px] md:w-[300px] left-0"
+            className="absolute top-0 w-[240px] md:w-[70%] left-0"
             alt=""
           />
           <img
             src="/about/shade2.png"
-            className="absolute top-0 w-[190px] md:w-[250px] right-0"
+            className="absolute top-0 w-[190px] md:w-[60%]  right-0"
             alt=""
           />
         </div>

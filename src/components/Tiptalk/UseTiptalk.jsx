@@ -4,7 +4,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 export default function UseTipTalk() {
   const { theme } = useContext(GlobalContext);
   return (
-    <div className="md:mt-30 lg:mt-0 flex  justify-between items-center flex-wrap lg:flex-nowrap px-10 lg:px-0  ">
+    <div className="md:mt-30 lg:mt-0 flex  justify-between items-center flex-wrap lg:flex-nowrap px-10 lg:px-0 flex-col-reverse lg:flex-row">
       <div className="w-full px-0 flex  flex-col items-center lg:pl-40">
         <div>
           <h3

@@ -19,6 +19,7 @@ const Navbar = () => {
   const location = useLocation();
   const { theme, setTheme } = useContext(GlobalContext);
   const toggleMenu = () => {
+    setIsDrop(isOpen&&false);
     setIsOpen(!isOpen);
   };
   const [imgPath, setImgPath] = useState("/whiteglass.png");
@@ -44,7 +45,7 @@ const Navbar = () => {
       ),
       iconClass:
         "text-white transition-all duration-300 group-hover:text-[#0390A0]",
-      to: "/perkshub",
+      to: "/future/perkshub",
     },
     {
       title: "Leaderboard",
@@ -59,7 +60,7 @@ const Navbar = () => {
       ),
       iconClass:
         "text-white transition-all duration-300 group-hover:text-[#0390A0]",
-      to: "/leaderboard",
+      to: "/future/leaderboard",
     },
     {
       title: "Tiptalk",
@@ -73,7 +74,7 @@ const Navbar = () => {
         />
       ),
       iconClass: "transition-all w-8 duration-300 ",
-      to: "/tiptalk",
+      to: "/future/tiptalk",
     },
     {
       title: "Generosity Hub",
@@ -88,7 +89,7 @@ const Navbar = () => {
       ),
       iconClass:
         "text-white transition-all duration-300 group-hover:text-[#0390A0]",
-      to: "/",
+      to: "/future/generosity",
     },
     {
       title: "Wallet",
@@ -103,7 +104,7 @@ const Navbar = () => {
       ),
       iconClass:
         "text-white transition-all duration-300 group-hover:text-[#0390A0]",
-      to: "/",
+      to: "/future/wallet",
     },
   ];
 
@@ -111,20 +112,20 @@ const Navbar = () => {
     <div className="bg-transparent relative text-white flex flex-col items-center pt-5  ">
       <nav className="flex items-center justify-between w-full px-4 md:px-10 lg:px-18 text-sm">
         <div className="hidden md:flex items-center gap-10 w-full ">
-          <img src={"/logo.png"} alt="Logo" className="h-10 md:h-20 md:w-20" />
+          <img src={"/logo.png"} alt="Logo" className="h-10 md:h-15 md:w-20" />
           <ul
             className={`flex space-x-8 ${
               theme === "dark" ? "text-white" : "text-black"
             } font-normal`}
           >
-            {Link?.map((item, i) => (
-              <li
-                key={i}
-                className={`cursor-pointer font-normal text-lg leading-[21px] ${
-                  theme == "light" ? "text-[#565656]" : "text-white"
-                }  ${item.to === location.pathname ? "active-link" : ""}`}
-              >
-                {item.to == "" ? (
+            {Link?.map((item, i) =>
+              item.to == "" ? (
+                <li
+                  key={i}
+                  className={`cursor-pointer font-normal text-lg leading-[21px] ${
+                    theme === "light" ? "text-[#565656]" : "text-white"
+                  } ${location?.pathname.includes("future") ? "active-link" : ""}`}
+                >
                   <button
                     onClick={() => setIsDrop(!isDrop)}
                     className="cursor-pointer flex items-center gap-2"
@@ -132,15 +133,22 @@ const Navbar = () => {
                     {item.link}{" "}
                     <IoIosArrowDown color="#0390A0" className="mt-1" />{" "}
                   </button>
-                ) : (
+                </li>
+              ) : (
+                <li
+                  key={i}
+                  className={`cursor-pointer font-normal text-lg leading-[21px] ${
+                    theme === "light" ? "text-[#565656]" : "text-white"
+                  } ${item.to==location?.pathname ? "active-link" : ""}`}
+                >
                   <NavLink to={item.to}>{item.link}</NavLink>
-                )}
-              </li>
-            ))}
+                </li>
+              )
+            )}
           </ul>
         </div>
 
-        <div className="flex gap-3 me-5 justify-between md:justify-end w-full items-center">
+        <div className="flex gap-3 me-5 justify-between md:justify-end w-full md:w-[50%] items-center">
           <button
             aria-label="button"
             name="theme-toggle"
@@ -148,7 +156,7 @@ const Navbar = () => {
             onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
             className={`${
               theme == "light" ? "bg-[#71FFFF]" : "bg-[#005050]"
-            } rounded-full transition-all duration-300 w-[50px] cursor-pointer lg:w-[70px] h-[30px] lg:h-[37.5px] p-[4px] flex justify-between items-center`}
+            } rounded-full overflow-hidden transition-all duration-300 w-[60px] cursor-pointer lg:w-[70px] h-[30px] lg:h-[37.5px] p-[4px] flex justify-between items-center`}
           >
             {theme == "light" && (
               <img
@@ -162,7 +170,7 @@ const Navbar = () => {
               className={`h-6 w-6 lg:h-8 lg:w-8 text-xl text-white transition-all duration-300 rounded-full flex items-center justify-center ${
                 theme == "light"
                   ? "translate-x-0 bg-white"
-                  : "translate-x-[calc(100%-28%)] lg:translate-x-[calc(5%-3%)] bg-white"
+                  : "translate-x-[calc(100%-100%)] lg:translate-x-[calc(5%-3%)] bg-white"
               } `}
             ></span>
 
@@ -170,7 +178,7 @@ const Navbar = () => {
               <img
                 src={"/dark-solar.png"}
                 alt="light"
-                className={`transition-transform duration-300 transform translate-x-[calc(100%-28%)] lg:translate-x-[calc(15%-3%)] w-[30px]`}
+                className={`transition-transform duration-300 transform translate-x-[calc(100%-80%)] lg:translate-x-[calc(15%-3%)] w-[30px]`}
               />
             )}
           </button>
@@ -180,7 +188,7 @@ const Navbar = () => {
             type="button"
             name="menu-toggle"
             onClick={() => toggleMenu()}
-            className="flex md:hidden lg:hidden h-4 lg:h-auto"
+            className="flex md:hidden cursor-pointer lg:hidden h-4 lg:h-auto"
           >
             {!isOpen ? (
               <RxHamburgerMenu
@@ -203,7 +211,13 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="w-full px-5">
-          <div className="md:hidden rounded-[20px] bg-[#03C6DB] mt-4  text-white w-full ">
+          <div
+            className={` ${
+              theme == "light"
+                ? "bg-gradient-to-br from-[#0390A0] via-[#03C6DB] to-[#03C6DB]"
+                : "bg-gradient-to-br from-[#002225] via-[#0D3A3F] to-[#0D3A3F]"
+            } md:hidden rounded-[20px] bg-[#03C6DB] mt-4  text-white w-full `}
+          >
             <ul className="flex flex-col space-y-4 items-center py-5 justify-center uppercase">
               {Link?.map((item, i) => (
                 <li
@@ -212,7 +226,17 @@ const Navbar = () => {
                     item.to == location.pathname ? "" : ""
                   } `}
                 >
-                  <NavLink to={item.to}>{item.link}</NavLink>
+                  {item.to == "" ? (
+                    <button
+                      onClick={() => setIsDrop(!isDrop)}
+                      className="cursor-pointer flex items-center gap-2"
+                    >
+                      {item.link}{" "}
+                      <IoIosArrowDown color="white" className="mt-1" />{" "}
+                    </button>
+                  ) : (
+                    <NavLink to={item.to}>{item.link}</NavLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -221,36 +245,33 @@ const Navbar = () => {
       )}
 
       {isDrop && (
-        <div className="px-4 md:px-10 lg:px-18 w-full text-black absolute z-50 top-20 ">
+        <div className="px-4 md:px-10 lg:px-18 w-full text-black absolute z-50 top-60 md:top-20">
           <div
             className={`${
               theme == "light" ? "bg-white" : "bg-[#1F3133]"
-            } shadow-2xl rounded-[20px] w-full mt-6 py-4 px-4 transition-transform duration-500 ease-out transform translate-y-0 ${
+            } shadow-2xl rounded-[20px] w-full overflow-auto mt-6 py-4 px-4 transition-transform duration-500 ease-out transform translate-y-0 ${
               isDrop ? "animate-slide-down" : "animate-slide-up"
-            }  `}
+            }`}
           >
-            <div className="grid gap-5 grid-cols-5">
+            {/* Wrap this container with horizontal scroll */}
+            <div className="flex overflow-x-auto space-x-4 pb-4">
               {cardContent.map((card, index) => (
                 <div
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   key={index}
-                  className={`group  py-4 px-4 rounded-[30px] transition-all duration-300 ${
+                  className={`group py-4 px-4 rounded-[30px] transition-all duration-300 ${
                     theme == "light"
-                      ? "bg-[#F9FAFA] hover:bg-[linear-gradient(287.64deg,_#0390A0_0%,_#03C6DB_120.13%)]" // Hover gradient for light theme
-                      : "bg-[#002428] hover:bg-[linear-gradient(193.22deg,_#002225_-6.27%,_#0D3A3F_118.98%)]" // Hover gradient for dark theme
-                  }`}
+                      ? "bg-[#F9FAFA] hover:bg-[linear-gradient(287.64deg,_#0390A0_0%,_#03C6DB_120.13%)]"
+                      : "bg-[#002428] hover:bg-[linear-gradient(193.22deg,_#002225_-6.27%,_#0D3A3F_118.98%)]"
+                  } min-w-[200px]`}
                 >
                   <button
-                    className={`bg-gradient-to-r p-3 rounded-[15px]
-                     
-                     from-[#0390A0] to-[#03C6DB]
-                     
-                     transition-all duration-300 group-hover:text-white ${
-                       theme == "light"
-                         ? "group-hover:from-white group-hover:to-white"
-                         : "group-hover:from-[#1F3133] group-hover:to-[#1F3133]"
-                     }  `}
+                    className={`bg-gradient-to-r p-3 rounded-[15px] from-[#0390A0] to-[#03C6DB] transition-all duration-300 group-hover:text-white ${
+                      theme == "light"
+                        ? "group-hover:from-white group-hover:to-white"
+                        : "group-hover:from-[#1F3133] group-hover:to-[#1F3133]"
+                    }`}
                   >
                     {card.icon}
                   </button>

@@ -148,12 +148,12 @@ export default function Footer() {
             </div>
             <ul className="mt-3 flex gap-6 items-center transition-all duration-500">
               <li className="mb-6">
-                <NavLink className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
+                <NavLink to={"/privacy"} className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
                   Privacy Policy
                 </NavLink>
               </li>
               <li className="mb-6">
-                <NavLink className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
+                <NavLink to={"/terms"} className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
                   Terms & Conditions
                 </NavLink>
               </li>

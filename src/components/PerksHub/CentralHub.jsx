@@ -22,14 +22,14 @@ export default function CenteralHub() {
           alt=""
         />
       </div>
-      <div className="w-full mt-20">
+      <div className="w-full mt-0 md:mt-20">
         <h3
           className={`${
             theme == "light" ? "text-black" : "text-white"
-          } text-[52px] leading-[60px] font-400`}
+          }  text-[42px] md:text-[52px] leading-[52px] md:leading-[60px] font-400`}
         >
           Explore Your{" "}
-          <span className="text-[52px] leading-[60px] font-semibold">
+          <span className="font-semibold">
             Central Hub
           </span>
         </h3>

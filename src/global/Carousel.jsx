@@ -45,7 +45,7 @@ export default function HomeSlider() {
       </div>
       <div className="absolute w-full top-[50px]">
         <h1
-          className={`text-[50px] font-normal text-center leading-[63px] ${
+          className={`text-[40px] lg:text-[50px] font-normal text-center leading-[63px] ${
             theme === "light" ? "text-[#000000]" : "text-white"
           }`}
         >

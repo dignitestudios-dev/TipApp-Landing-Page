@@ -24,9 +24,9 @@ export default function Perks() {
         <h3
           className={`${
             theme == "light" ? "text-black" : "text-white"
-          } text-[52px] leading-[60px] font-400`}
+          } text-[35px] md:text-[52px] leading-[52px] md:leading-[60px] font-400`}
         >
-          Tipping Through   <span className="text-[52px] leading-[60px] font-semibold">
+          Tipping Through   <span className=" font-semibold">
             Perks
           </span>
         </h3>

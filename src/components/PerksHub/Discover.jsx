@@ -9,10 +9,10 @@ export default function Discover() {
         <h3
           className={`${
             theme == "light" ? "text-black" : "text-white"
-          } text-[52px] leading-[60px] font-400`}
+          } text-[35px] md:text-[52px] leading-[52px] md:leading-[60px] font-400`}
         >
           Discover More About <br />
-          <span className="text-[52px] leading-[60px] font-semibold">
+          <span className=" font-semibold">
             Others
           </span>
         </h3>

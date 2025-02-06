@@ -7,7 +7,7 @@ export default function Perks() {
     <div className="w-full mt-[100px] relative px-4 md:px-10 lg:px-18 ">
       <div className="">
         <h1
-          className={`text-[50px] text-center leading-[63px] ${
+          className={`text-[40px] mb-5 md:text-[50px] text-center leading-[63px] ${
             theme === "light" ? "text-[#000000]" : "text-white"
           }`}
         >

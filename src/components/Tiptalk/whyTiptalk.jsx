@@ -22,7 +22,7 @@ export default function WhyTiptalk() {
           alt=""
         />
       </div>
-      <div className="w-full mt-20">
+      <div className="w-full mt-0 md:mt-20">
         <h3
           className={`${
             theme == "light" ? "text-black" : "text-white"

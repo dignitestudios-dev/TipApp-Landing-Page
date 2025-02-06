@@ -33,10 +33,10 @@ export default function SocialRes() {
         <h3
           className={`${
             theme == "light" ? "text-black" : "text-white"
-          } text-[42px] leading-[63px] font-400`}
+          }  text-[32px] md:text-[42px] leading-[43px] lg:leading-[63px] font-400`}
         >
           Giving Back and Making a{" "}
-          <span className="text-[42px] leading-[63px] font-semibold">
+          <span className=" font-semibold">
             Positive Impact
           </span>
         </h3>
@@ -44,7 +44,7 @@ export default function SocialRes() {
         <p
           className={`${
             theme == "light" ? "text-[#365356]" : "text-white"
-          } text-[18px] font-medium leading-[25px]`}
+          } text-[18px] font-medium leading-[25px] mt-3`}
         >
           At Perks, we believe that gratitude goes beyond just saying thank you.
           It’s about giving back and making a positive impact whether through

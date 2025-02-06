@@ -9,10 +9,9 @@ export default function OurFuture() {
         <h3
           className={`${
             theme == "light" ? "text-black" : "text-white"
-          } text-[52px] leading-[60px] font-400`}
+          } text-[42px] md:text-[52px] leading-[60px] font-400`}
         >
-          Our Vision for
-          <span className="text-[52px] leading-[60px] font-semibold">
+          Our Vision for <span className="font-semibold">
             the Future
           </span>
         </h3>

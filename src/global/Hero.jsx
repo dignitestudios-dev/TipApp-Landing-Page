@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <>
       <div className="w-full mt-3 relative px-4 md:px-10 lg:px-18  h-auto lg:h-[1150px]  xl:h-[1250px] ">
-        <div className={`h-full  hero-bg ${theme=="light"?"bg-[url('/public/hero-bg.png')] ":"bg-[url('/public/dark-theme-hero.png')] "}  relative z-5`}>
-        <div className="h-full flex justify-center relative z-4 flex-col md:h-auto md:block md:justify-start">
+        <div className={`h-auto lg:h-[95vh] py-10  hero-bg ${theme=="light"?"bg-[url('/public/hero-bg.png')] ":"bg-[url('/public/dark-theme-hero.png')] "}  relative z-5`}>
+        <div className="h-full flex justify-center relative z-4 flex-col lg:h-auto lg:block lg:justify-start">
             <h3 className="pt-5 text-center text-[42px] md:text-[52px] lg:text-[62px] text-[#FCFCFE]">
               <span className="font-normal">Empowering Gratitude</span>
               ,
