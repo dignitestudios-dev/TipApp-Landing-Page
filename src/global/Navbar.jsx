@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { NavLink as Link } from "../constent/NavbarLink";
 import { NavLink, useLocation } from "react-router-dom";
@@ -18,6 +18,7 @@ const Navbar = () => {
 
   const location = useLocation();
   const { theme, setTheme } = useContext(GlobalContext);
+  const dropdownRef = useRef(null);
   const toggleMenu = () => {
     setIsDrop(isOpen&&false);
     setIsOpen(!isOpen);
@@ -27,6 +28,20 @@ const Navbar = () => {
   const handleMouseEnter = () => {
     setImgPath("/hatglas.png"); // Reset to the original image
   };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDrop(false);
+    }
+  };
+
+  // Adding event listener for click outside when the component mounts
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleMouseLeave = () => {
     setImgPath("/whiteglass.png");
@@ -245,7 +260,7 @@ const Navbar = () => {
       )}
 
       {isDrop && (
-        <div className="px-4 md:px-10 lg:px-18 w-full text-black absolute z-50 top-60 md:top-20">
+        <div  ref={dropdownRef} className="px-4 md:px-10 lg:px-18 w-full text-black absolute z-50 top-60 md:top-20">
           <div
             className={`${
               theme == "light" ? "bg-white" : "bg-[#1F3133]"
@@ -294,6 +309,7 @@ const Navbar = () => {
 
                   <NavLink
                     to={card?.to}
+                    onClick={()=>setIsDrop(false)}
                     className={`${
                       theme == "light" ? "text-[#365356]" : "text-white"
                     } mt-4 flex text-[14px] items-center gap-1 transition-all duration-300 group-hover:text-white`}

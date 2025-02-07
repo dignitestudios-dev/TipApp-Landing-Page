@@ -4,7 +4,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 export default function UsPart() {
   const {theme}=useContext(GlobalContext);
   return (
-    <div className="w-full mt-[200px] relative px-4 md:px-10 lg:px-18 pb-3 ">
+    <div className="w-full mt-[7  0px] lg:mt-[200px] relative px-4 md:px-10 lg:px-18 pb-3 ">
       <div>
         <h1
           className={`text-[50px] text-center leading-[63px] ${

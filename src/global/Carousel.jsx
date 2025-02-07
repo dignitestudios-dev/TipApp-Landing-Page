@@ -64,7 +64,7 @@ export default function HomeSlider() {
 
       <Swiper
         ref={swiperRef}
-        className="mySwiper mt-20"
+        className="mySwiper mt-[130px] lg:mt-20"
         modules={[Pagination, EffectCoverflow, Autoplay]}
         pagination={{
           clickable: true,
@@ -145,7 +145,7 @@ export default function HomeSlider() {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> 
         ))}
       </Swiper>
       <div className="flex justify-center mt-5">

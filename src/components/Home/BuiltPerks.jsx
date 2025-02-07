@@ -5,13 +5,13 @@ export default function BuiltPerks() {
   const { theme } = useContext(GlobalContext);
 
   return (
-    <div className="w-full mt-3 relative px-4 md:px-10 lg:px-15 pb-3">
+    <div className="w-full mt-3 lg:mt-30 relative px-4 md:px-10 lg:px-15 pb-3">
       <div
-        className={`flex items-center relative mx-auto ${
+        className={`flex items-center relative  mx-auto ${
           theme === "light"
             ? "bg-white"
             : "bg-[linear-gradient(193.22deg,_#002225_-6.27%,_#0D3A3F_118.98%)]"
-        } md:w-[850px] p-10 custom-shadow rounded-[50px]`}
+        } md:w-[950px] p-10 custom-shadow rounded-[50px]`}
       >
         <div>
           <img
@@ -27,7 +27,7 @@ export default function BuiltPerks() {
             srcset=""
           />
         </div>
-        <div className="text-center w-[70%] mx-auto">
+        <div className="text-center w-auto lg:w-[70%] mx-auto">
           <h1
             className={`text-[40px] lg:text-[50px] ${
               theme === "light" ? "text-[#365356]" : "text-white"
@@ -36,7 +36,7 @@ export default function BuiltPerks() {
             Why We Built <span className="font-semibold">Perks</span>
           </h1>
           <p
-            className={`font-light mt-3 text-[16px] lg:text-[12px] ${
+            className={`font-light mt-3 text-[12px] lg:text-[12px] ${
               theme === "light" ? "text-[#365356]" : "text-white"
             }`}
           >
@@ -68,11 +68,10 @@ export default function BuiltPerks() {
             we’re creating a community that uplifts and inspires.
           </p>
         </div>
-
         <div>
           <img
             src="/right-shadow.png "
-            className="absolute w-screen -right-[400px] -bottom-[40%]"
+            className="absolute w-screen  hidden lg:flex lg:-right-[400px] lg:-bottom-[40%]"
             alt=""
             srcset=""
           />
@@ -84,7 +83,7 @@ export default function BuiltPerks() {
           />
           <img
             src="/sphere1.png "
-            className="absolute w-[120px] -right-[80px] top-70"
+            className="absolute w-[120px] hidden lg:flex -right-[80px] top-70"
             alt=""
             srcset=""
           />
