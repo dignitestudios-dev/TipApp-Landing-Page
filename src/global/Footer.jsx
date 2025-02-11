@@ -15,8 +15,7 @@ export default function Footer() {
         {/*Grid*/}
         <div className=" py-14 grid grid-cols-1 lg:grid-cols-3 gap-y-8 max-w-sm mx-auto sm:max-w-lg md:max-w-3xl lg:max-w-full lg:gap-x-12">
           <div className="w-full lg:max-w-xs mb-10  lg:mb-0 col-span-full lg:col-span-1">
-            <a
-              href="https://pagedone.io/"
+            <a      
               className="flex justify-center lg:justify-start mb-8"
             >
               <img

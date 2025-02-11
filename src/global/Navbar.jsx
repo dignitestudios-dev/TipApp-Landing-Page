@@ -20,7 +20,7 @@ const Navbar = () => {
   const { theme, setTheme } = useContext(GlobalContext);
   const dropdownRef = useRef(null);
   const toggleMenu = () => {
-    setIsDrop(isOpen&&false);
+    setIsDrop(isOpen && false);
     setIsOpen(!isOpen);
   };
   const [imgPath, setImgPath] = useState("/whiteglass.png");
@@ -139,7 +139,9 @@ const Navbar = () => {
                   key={i}
                   className={`cursor-pointer font-normal text-lg leading-[21px] ${
                     theme === "light" ? "text-[#565656]" : "text-white"
-                  } ${location?.pathname.includes("future") ? "active-link" : ""}`}
+                  } ${
+                    location?.pathname.includes("future") ? "active-link" : ""
+                  }`}
                 >
                   <button
                     onClick={() => setIsDrop(!isDrop)}
@@ -154,7 +156,7 @@ const Navbar = () => {
                   key={i}
                   className={`cursor-pointer font-normal text-lg leading-[21px] ${
                     theme === "light" ? "text-[#565656]" : "text-white"
-                  } ${item.to==location?.pathname ? "active-link" : ""}`}
+                  } ${item.to == location?.pathname ? "active-link" : ""}`}
                 >
                   <NavLink to={item.to}>{item.link}</NavLink>
                 </li>
@@ -162,7 +164,6 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-
         <div className="flex gap-3 me-5 justify-between md:justify-end w-full md:w-[50%] items-center">
           <button
             aria-label="button"
@@ -260,7 +261,10 @@ const Navbar = () => {
       )}
 
       {isDrop && (
-        <div  ref={dropdownRef} className="px-4 md:px-10 lg:px-18 w-full text-black absolute z-50 top-60 md:top-20">
+        <div
+          ref={dropdownRef}
+          className="px-4 md:px-10 lg:px-18 w-full text-black absolute z-50 top-60 md:top-20"
+        >
           <div
             className={`${
               theme == "light" ? "bg-white" : "bg-[#1F3133]"
@@ -309,7 +313,7 @@ const Navbar = () => {
 
                   <NavLink
                     to={card?.to}
-                    onClick={()=>setIsDrop(false)}
+                    onClick={() => setIsDrop(false)}
                     className={`${
                       theme == "light" ? "text-[#365356]" : "text-white"
                     } mt-4 flex text-[14px] items-center gap-1 transition-all duration-300 group-hover:text-white`}
