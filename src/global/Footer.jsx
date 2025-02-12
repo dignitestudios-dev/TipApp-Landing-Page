@@ -20,7 +20,7 @@ export default function Footer() {
             >
               <img
                 src="/white-logo.png"
-                className="w-50"
+                className="w-50  "
                 alt="white-logo.png"
                 srcset=""
               />
@@ -29,29 +29,29 @@ export default function Footer() {
               Social links
             </span>
             <div className="flex items-center justify-center gap-4 mt-5">
-              <img src={theme=="light"?"/fb.png":"/dark-fb.png"} alt="fb.png" className="w-15" srcset="" />
+              <img src={theme=="light"?"/fb.png":"/dark-fb.png"} alt="fb.png" className="w-15 cursor-pointer" srcset="" />
               <img
                 src={theme=="light"?"/insta.png":"/dark-insta.png"}
                 alt="insta.png"
-                className="w-15"
+                className="cursor-pointer w-15"
                 srcset=""
               />
               <img
                 src={theme=="light"?"/twiter.png":"/dark-twitter.png"}
                 alt="twiter.png"
-                className="w-15"
+                className="cursor-pointer w-15"
                 srcset=""
               />
               <img
                 src={theme=="light"?"/linkedin.png":"/dark-linkedin.png"}
                 alt="linkedin.png"
-                className="w-15"
+                className="cursor-pointer w-15"
                 srcset=""
               />
               <img
                 src={theme=="light"?"/tiktok.png":"/dark-tiktok.png"}
                 alt="tiktok.png"
-                className="w-15"
+                className="cursor-pointer w-15"
                 srcset=""
               />
             </div>
@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="py-7 border-t border-[#FFFFFF21]">
           <div className="flex items-center justify-between ">
             <div className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
-              ©2024 Perks App. All rights reserved.
+              ©2025 Perks App. All rights reserved.
             </div>
             <ul className="mt-3 flex gap-6 items-center transition-all duration-500">
               <li className="mb-6">
