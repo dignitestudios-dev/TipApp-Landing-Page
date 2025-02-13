@@ -15,37 +15,37 @@ export default function Faq() {
       question: "How do I create a profile on Perks?",
       answer:
         "Signing up is simple! Download the app, enter your personal details, and customize your profile with a picture, job title, and optional CV or portfolio. Your profile will include a unique QR code, making it easy for others to tip or review you directly.",
-      open: true,
+      open: false,
     },
     {
       question: "Can I tip someone who isn’t on Perks yet?",
       answer:
         "Yes! Perks allows you to send tips to individuals who haven’t joined the platform. They’ll receive an invitation to sign up and claim the tip, encouraging new users to join the community.",
-      open: true,
+      open: false,
     },
     {
       question: "Is tipping anonymous?",
       answer:
         "You can choose to tip anonymously or reveal your identity. Anonymous tipping allows you to give freely without disclosing your details, making it ideal for users who value privacy or wish to avoid attention.",
-      open: true,
+      open: false,
     },
     {
       question: "How Do I Send and Receive Tips?",
       answer:
         "Sending and receiving tips on Perks is easy and secure. You can use the in-app wallet to send tips directly to others or receive tips for your service, all within the app. Simply top up your wallet with funds, and you can quickly tip others or withdraw your earnings whenever you like. For added convenience, we also support external payment options such as Venmo, PayPal, CashApp, Google Pay, and Apple Pay. Whether you’re adding funds, tipping others, or withdrawing your earnings, the process is quick, seamless, and secure.",
-      open: true,
+      open: false,
     },
     {
       question: "Can I control what’s visible on my profile?",
       answer:
         "Absolutely! Perks offers robust privacy controls, allowing you to choose what sections—like tips received, tips sent, or reviews—you want to display. You can also delete any negative or false reviews to maintain a positive image.",
-      open: true,
+      open: false,
     },
     {
       question: "What happens if I receive a false review?",
       answer:
         "You have the option to delete negative or false reviews on your profile. This ensures a fair representation of your expertise and protects your reputation.",
-      open: true,
+      open: false,
     },
   ]);
 
