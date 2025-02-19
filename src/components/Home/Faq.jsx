@@ -62,7 +62,7 @@ export default function Faq() {
       })
     );
   };
-
+ 
   return (
     <div className="w-full mt-30 relative px-4 md:px-10 lg:px-18 pb-3">
       <div>

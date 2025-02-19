@@ -82,7 +82,7 @@ export default function BuiltPerks() {
             srcset=""
           />
           <img
-            src="/sphere1.png "
+            src="/sphere1.png"
             className="absolute w-[120px] hidden lg:flex -right-[80px] top-70"
             alt=""
             srcset=""
