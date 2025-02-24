@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import FAQList from "./FaqList";
 import { GlobalContext } from "../../context/GlobalContext";
 
@@ -76,7 +76,7 @@ export default function Faq() {
             theme === "light" ? "text-[#000000]" : "text-white"
           }`}
         >
-          We're here to answer all <br /> your questions.
+          We&apos;re here to answer all <br /> your questions.
         </h3>
         <div className="faqs mt-10">
           {faqs.map((faq, index) => (

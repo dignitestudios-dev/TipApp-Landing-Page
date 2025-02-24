@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { NavLink as Link } from "../constent/NavbarLink";
 import { NavLink, useLocation } from "react-router-dom";
@@ -26,7 +26,7 @@ const Navbar = () => {
   const [imgPath, setImgPath] = useState("/whiteglass.png");
 
   const handleMouseEnter = () => {
-    setImgPath("/hatglas.png"); // Reset to the original image
+    setImgPath("/hatglas.png");
   };
 
   const handleClickOutside = (event) => {
@@ -226,15 +226,17 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <div className="w-full px-5">
+        <div className="w-[50%] absolute z-10 top-10 right-0 h-screen px-5">
           <div
             className={` ${
               theme == "light"
-                ? "bg-gradient-to-br from-[#0390A0] via-[#03C6DB] to-[#03C6DB]"
+                ? "bg-gradient-to-br h-auto from-[#0390A0] via-[#03C6DB] to-[#03C6DB]"
                 : "bg-gradient-to-br from-[#002225] via-[#0D3A3F] to-[#0D3A3F]"
-            } md:hidden rounded-[20px] bg-[#03C6DB] mt-4  text-white w-full `}
+            } md:hidden rounded-[20px] ${
+              isDrop ? "animate-slide-left" : "animate-slide-right"
+            } bg-[#03C6DB] mt-4  text-white w-full `}
           >
-            <ul className="flex flex-col space-y-4 items-center py-5 justify-center uppercase">
+            <ul className="flex flex-col space-y-4 px-5 py-5 justify-center uppercase">
               {Link?.map((item, i) => (
                 <li
                   key={i}

@@ -12,7 +12,7 @@ export default function BuiltPerks() {
             ? "bg-white"
             : "bg-[linear-gradient(193.22deg,_#002225_-6.27%,_#0D3A3F_118.98%)]"
         } md:w-[950px] p-10 custom-shadow rounded-[50px]`}
-      >
+      > 
         <div>
           <img
             src="/left-shadow.png "
@@ -51,7 +51,7 @@ export default function BuiltPerks() {
             className={`font-light mt-3 text-[12px] ${
               theme === "light" ? "text-[#365356]" : "text-white"
             }`}
-          >
+          >   
             Perks bridges the gap between appreciation and opportunity. Whether
             it’s a standout barista, a helpful colleague, or an exceptional
             experience, we’ve built a platform that empowers you to recognize
