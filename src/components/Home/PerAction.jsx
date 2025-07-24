@@ -17,13 +17,13 @@ export default function PerAction() {
         </div>
         <div className="relative">
           <img
-            src={"/video-section-bg.png"}
+            src={theme=="light"?"/video-section-bg.png":"/video-section-bg-dark.png"}
             className="w-[80%] mx-auto mt-10"
             alt="video-section-bg.png"
           />
-          <button className="absolute cursor-pointer bg-transparent border-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          {/* <button className="absolute cursor-pointer bg-transparent border-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <img src="/play-button.png" className="w-30" alt="Play Button" />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

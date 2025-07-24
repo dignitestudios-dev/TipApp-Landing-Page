@@ -19,7 +19,7 @@ export default function Footer() {
               className="flex justify-center lg:justify-start mb-8"
             >
               <img
-                src="/white-logo.png"
+                src={theme=="light"?"/white-logo.png":"/dark-white-logo.png"}
                 className="w-50  "
                 alt="white-logo.png"
                 srcset=""
