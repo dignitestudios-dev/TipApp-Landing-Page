@@ -127,7 +127,11 @@ const Navbar = () => {
     <div className="bg-transparent relative text-white flex flex-col items-center pt-5  ">
       <nav className="flex items-center justify-between w-full px-4 md:px-10 lg:px-18 text-sm">
         <div className="hidden md:flex items-center gap-10 w-full ">
-          <img src={theme=="light"?"/Logo.png":"/dark-white-logo.png"} alt="Logo" className="h-10 md:h-15 md:w-20" />
+          <img
+            src={theme == "light" ? "/Logo.png" : "/dark-white-logo.png"}
+            alt="Logo"
+            className="h-10 md:h-15 md:w-20"
+          />
           <ul
             className={`flex space-x-8 ${
               theme === "dark" ? "text-white" : "text-black"
@@ -148,7 +152,7 @@ const Navbar = () => {
                     className="cursor-pointer flex items-center gap-2"
                   >
                     {item.link}{" "}
-                    <IoIosArrowDown color="#0390A0" className="mt-1" />{" "}
+                    <IoIosArrowDown color="#0390A0" className="mt-1" />
                   </button>
                 </li>
               ) : (
