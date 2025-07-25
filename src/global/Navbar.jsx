@@ -128,7 +128,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between w-full px-4 md:px-10 lg:px-18 text-sm">
         <div className="hidden md:flex items-center gap-10 w-full ">
           <img
-            src={theme == "light" ? "/dark-white-logo.png" : "/dark-white-logo.png"}
+            src={theme == "light" ? "/Logo.png" : "/dark-white-logo.png"}
             alt="Logo"
             className="h-10 md:h-15 md:w-20"
           />
