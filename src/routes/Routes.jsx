@@ -11,6 +11,7 @@ import Wallet from "../pages/Wallet/Wallet";
 import Contact from "../pages/Contact/Contact";
 import Terms from "../pages/Terms/Terms";
 import Privacy from "../pages/Terms/Privacy";
+import Donation from "../pages/Donation/Donation";
 
 export default function Routing() {
   return (
@@ -26,6 +27,7 @@ export default function Routing() {
         <Route path="/contact" element={<Layout pages={<Contact />} />} />
         <Route path="/terms" element={<Layout pages={<Terms />} />} />
         <Route path="/privacy" element={<Layout pages={<Privacy />} />} />
+        <Route path="/donation" element={<Layout pages={<Donation />} />} />
       </Routes>
     </BrowserRouter>
   );

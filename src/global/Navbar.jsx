@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { NavLink as Link } from "../constent/NavbarLink";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   MdClose,
@@ -15,7 +15,7 @@ import { IoWalletOutline } from "react-icons/io5";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
-
+  const navigate = useNavigate("");
   const location = useLocation();
   const { theme, setTheme } = useContext(GlobalContext);
   const dropdownRef = useRef(null);
@@ -130,7 +130,10 @@ const Navbar = () => {
           <img
             src={theme == "light" ? "/black-logo.png" : "/dark-white-logo.png"}
             alt="Logo"
-            className="h-10 md:h-15 md:w-20"
+            className="h-10 md:h-15 md:w-20 cursor-pointer"
+            onClick={()=>{
+              navigate("/")
+            }}
           />
           <ul
             className={`flex space-x-8 ${
