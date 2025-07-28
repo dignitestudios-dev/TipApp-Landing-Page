@@ -12,6 +12,15 @@ import Contact from "../pages/Contact/Contact";
 import Terms from "../pages/Terms/Terms";
 import Privacy from "../pages/Terms/Privacy";
 import Donation from "../pages/Donation/Donation";
+import Paymentmethods from "../pages/Card/Card";
+import Notfound from "../pages/Notfound/Notfound";
+import Paymentoptions from "../pages/Paymentoptions/Paymentoptions";
+import Card from "../pages/Card/Card";
+import Venmo from "../pages/Venmo/Venmo";
+import Cashapp from "../pages/Cashapp/Cashapp";
+import Wallets from "../pages/Wallets/Wallets";
+
+
 
 export default function Routing() {
   return (
@@ -27,8 +36,15 @@ export default function Routing() {
         <Route path="/contact" element={<Layout pages={<Contact />} />} />
         <Route path="/terms" element={<Layout pages={<Terms />} />} />
         <Route path="/privacy" element={<Layout pages={<Privacy />} />} />
-        <Route path="/donation" element={<Layout pages={<Donation />} />} />
-      </Routes>
+        <Route path="/donation/:id/:token/:userid" element={<Layout pages={<Donation />} />} />
+        <Route path="/card" element={<Layout pages={<Card />} />} />
+        <Route path="/venmo" element={<Layout pages={<Venmo />} />} />
+        <Route path="/cashapp" element={<Layout pages={<Cashapp />} />} />
+        <Route path="/payment-options" element={<Layout pages={<Paymentoptions />} />} />
+        <Route path="/wallets" element={<Layout pages={<Wallets />} />} />
+
+        <Route path="*" element={<Notfound />} />
+      </Routes> 
     </BrowserRouter>
   );
 }
