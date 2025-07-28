@@ -12,6 +12,10 @@ import Contact from "../pages/Contact/Contact";
 import Terms from "../pages/Terms/Terms";
 import Privacy from "../pages/Terms/Privacy";
 import Donation from "../pages/Donation/Donation";
+import Paymentmethods from "../pages/Paymentmethods/Paymentmethods";
+import Notfound from "../pages/Notfound/Notfound";
+
+
 
 export default function Routing() {
   return (
@@ -27,7 +31,10 @@ export default function Routing() {
         <Route path="/contact" element={<Layout pages={<Contact />} />} />
         <Route path="/terms" element={<Layout pages={<Terms />} />} />
         <Route path="/privacy" element={<Layout pages={<Privacy />} />} />
-        <Route path="/donation" element={<Layout pages={<Donation />} />} />
+        <Route path="/donation/:id/:token/:userid" element={<Layout pages={<Donation />} />} />
+        <Route path="/payment-methods" element={<Layout pages={<Paymentmethods />} />} />
+
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
   );
