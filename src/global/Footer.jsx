@@ -15,11 +15,11 @@ export default function Footer() {
         {/*Grid*/}
         <div className=" py-14 grid grid-cols-1 lg:grid-cols-3 gap-y-8 max-w-sm mx-auto sm:max-w-lg md:max-w-3xl lg:max-w-full lg:gap-x-12">
           <div className="w-full lg:max-w-xs mb-10  lg:mb-0 col-span-full lg:col-span-1">
-            <a      
-              className="flex justify-center lg:justify-start mb-8"
-            >
+            <a className="flex justify-center lg:justify-start mb-8">
               <img
-                src={theme=="light"?"/white-logo.png":"/dark-white-logo.png"}
+                src={
+                  theme == "light" ? "/white-logo.png" : "/dark-white-logo.png"
+                }
                 className="w-50  "
                 alt="white-logo.png"
                 srcset=""
@@ -29,27 +29,32 @@ export default function Footer() {
               Social links
             </span>
             <div className="flex items-center justify-center gap-4 mt-5">
-              <img src={theme=="light"?"/fb.png":"/dark-fb.png"} alt="fb.png" className="w-15 cursor-pointer" srcset="" />
               <img
-                src={theme=="light"?"/insta.png":"/dark-insta.png"}
+                src={theme == "light" ? "/fb.png" : "/dark-fb.png"}
+                alt="fb.png"
+                className="w-15 cursor-pointer"
+                srcset=""
+              />
+              <img
+                src={theme == "light" ? "/insta.png" : "/dark-insta.png"}
                 alt="insta.png"
                 className="cursor-pointer w-15"
                 srcset=""
               />
               <img
-                src={theme=="light"?"/twiter.png":"/dark-twitter.png"}
+                src={theme == "light" ? "/twiter.png" : "/dark-twitter.png"}
                 alt="twiter.png"
                 className="cursor-pointer w-15"
                 srcset=""
               />
               <img
-                src={theme=="light"?"/linkedin.png":"/dark-linkedin.png"}
+                src={theme == "light" ? "/linkedin.png" : "/dark-linkedin.png"}
                 alt="linkedin.png"
                 className="cursor-pointer w-15"
                 srcset=""
               />
               <img
-                src={theme=="light"?"/tiktok.png":"/dark-tiktok.png"}
+                src={theme == "light" ? "/tiktok.png" : "/dark-tiktok.png"}
                 alt="tiktok.png"
                 className="cursor-pointer w-15"
                 srcset=""
@@ -92,18 +97,21 @@ export default function Footer() {
               </h4>
               <ul className="mt-3 transition-all duration-500">
                 <li className="mb-6">
-                  <NavLink className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
-                    support@perksapp.com
+                  <NavLink
+                    to={"mailto:Cswett1980@gmail.com"}
+                    className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex"
+                  >
+                    Cswett1980@gmail.com
+                  </NavLink>
+                </li>
+                <li className="mb-6">
+                  <NavLink to={"tel:+1(207) 423 3256"} className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
+                    +1(207) 423 3256
                   </NavLink>
                 </li>
                 <li className="mb-6">
                   <NavLink className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
-                    +1 (123) 456-7890
-                  </NavLink>
-                </li>
-                <li className="mb-6">
-                  <NavLink className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
-                    123 Perks Lane, Suite 100, City, State, ZIP
+                    134 Gorham Road, Scarborough, Maine
                   </NavLink>
                 </li>
               </ul>
@@ -147,12 +155,18 @@ export default function Footer() {
             </div>
             <ul className="mt-3 flex gap-6 items-center transition-all duration-500">
               <li className="mb-6">
-                <NavLink to={"/privacy"} className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
+                <NavLink
+                  to={"/privacy"}
+                  className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex"
+                >
                   Privacy Policy
                 </NavLink>
               </li>
               <li className="mb-6">
-                <NavLink to={"/terms"} className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex">
+                <NavLink
+                  to={"/terms"}
+                  className="text-[14px] font-[400] text-[#FFFFFF] max-lg:flex"
+                >
                   Terms & Conditions
                 </NavLink>
               </li>

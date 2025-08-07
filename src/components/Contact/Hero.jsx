@@ -62,9 +62,9 @@ export default function Hero() {
                   </button>
                   <NavLink
                     className={"font-semibold text-[18px]"}
-                    to={"mailto:support@perksapp.com"}
+                    to={"mailto:Cswett1980@gmail.com"}
                   >
-                    support@perksapp.com
+                    Cswett1980@gmail.com
                   </NavLink>
                 </div>
                 <div className="flex items-center gap-6 mt-4">
