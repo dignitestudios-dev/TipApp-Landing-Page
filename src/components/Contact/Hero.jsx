@@ -77,9 +77,9 @@ export default function Hero() {
                   </button>
                   <NavLink
                     className={"font-semibold text-[18px]"}
-                    to={"tel:(123) 456-7890"}
+                    to={"tel:+1(207) 423 3256"}
                   >
-                    (123) 456-7890
+                    +1(207) 423 3256
                   </NavLink>
                 </div>
                 <div className="flex items-center gap-6 mt-4">
@@ -91,7 +91,7 @@ export default function Hero() {
                     <SlLocationPin size={25} color={"#0390A0"} />
                   </button>
                   <p className={"font-semibold text-[18px]"}>
-                    123 App Avenue, Suite 456, City, State, 12345
+                    134 Gorham Road, Scarborough, Maine
                   </p>
                 </div>
               </div>
