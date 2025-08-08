@@ -124,13 +124,13 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-transparent relative text-white flex flex-col items-center pt-5  ">
+    <div className="bg-transparent relative text-white flex flex-col pt-5 pb-5 md:pb-0 md:pt-0 md:-mt-5 items-center  ">
       <nav className="flex items-center justify-between w-full px-4 md:px-10 lg:px-18 text-sm">
         <div className="hidden md:flex items-center gap-10 w-full ">
           <img
-            src={theme == "light" ? "/black-logo.png" : "/dark-white-logo.png"}
+            src={theme == "light" ? "/white-logo.png" : "/black-logo.png"}
             alt="Logo"
-            className="h-10 md:h-15 md:w-20 cursor-pointer"
+            className="h-10 md:h-40 md:w-30 cursor-pointer"
             onClick={()=>{
               navigate("/")
             }}

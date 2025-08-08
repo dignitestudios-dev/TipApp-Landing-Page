@@ -18,11 +18,11 @@ export default function Footer() {
             <a className="flex justify-center lg:justify-start mb-8">
               <img
                 src={
-                  theme == "light" ? "/white-logo.png" : "/dark-white-logo.png"
+                  theme == "light" ? "/footer-logo.png" : "/footer-logo.png"
                 }
-                className="w-50  "
+                className="w-52 -mt-20"
                 alt="white-logo.png"
-                srcset=""
+
               />
             </a>
             <span className="font-[400] text-[22px] text-white">
@@ -33,31 +33,31 @@ export default function Footer() {
                 src={theme == "light" ? "/fb.png" : "/dark-fb.png"}
                 alt="fb.png"
                 className="w-15 cursor-pointer"
-                srcset=""
+
               />
               <img
                 src={theme == "light" ? "/insta.png" : "/dark-insta.png"}
                 alt="insta.png"
                 className="cursor-pointer w-15"
-                srcset=""
+
               />
               <img
                 src={theme == "light" ? "/twiter.png" : "/dark-twitter.png"}
                 alt="twiter.png"
                 className="cursor-pointer w-15"
-                srcset=""
+
               />
               <img
                 src={theme == "light" ? "/linkedin.png" : "/dark-linkedin.png"}
                 alt="linkedin.png"
                 className="cursor-pointer w-15"
-                srcset=""
+
               />
               <img
                 src={theme == "light" ? "/tiktok.png" : "/dark-tiktok.png"}
                 alt="tiktok.png"
                 className="cursor-pointer w-15"
-                srcset=""
+
               />
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Footer() {
                 src="/play-store.png"
                 alt="play-store.png"
                 className="w-40"
-                srcset=""
+
               />
             </div>
             <div>
@@ -141,7 +141,7 @@ export default function Footer() {
                 src="/app-store.png"
                 alt="play-store.png"
                 className="w-40 mt-3"
-                srcset=""
+
               />
             </div>
           </div>
